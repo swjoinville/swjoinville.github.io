@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Techstart Startup Weekend Mega Joinville</title>
+    <link rel="stylesheet" href="asset/style.css">
+    <script>
+        // Contador regressivo até o evento
+        function startCountdown(eventDate) {
+            const countDownDate = new Date(eventDate).getTime();
+
+            const x = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countDownDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.querySelector(".countdown-time .d").innerHTML = days;
+                document.querySelector(".countdown-time .h").innerHTML = hours;
+                document.querySelector(".countdown-time .m").innerHTML = minutes;
+                document.querySelector(".countdown-time .s").innerHTML = seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.querySelector(".countdown-time").innerHTML = "O evento começou!";
+                }
+            }, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            startCountdown("Sep 27, 2024 18:00:00");
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" alt="Techstart Startup Weekend Mega Joinville">
+        <div class="time">27 - 29 de Setembro</div>
+        <div class="countdown-time">
+            <span class="d">22</span>
+            d
+            ::
+            <span class="h">1</span>
+            h
+            ::
+            <span class="m">48</span>
+            m
+            ::
+            <span class="s">6</span>
+            s
+        </div>
+        <nav>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="#sponsors">Patrocinadores</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Inscreva-se</a></li>
+        </nav>
+    </header>
+    <section class="content">
+        <div class="container">
+            <h1 class="gradient-text">techstars_ Startup Weekend Mega Joinville</h1>
+            <br>
+            <a href="https://www.sympla.com.br/meetup-metodos-de-ideacao--techstarts-startup-weekend-mega-joinville__2481540" target="_blank"  class="button">
+                INSCREVA-SE
+            </a>
+        </div>
+    </section>
+    <hr>
+    <hr class="gradient">
+    <section class="attends">
+        <h2>Por que participar?</h2>
+
+        <h4 class="text-gradient-purple">Transforme sua ideia em realidade</h4>
+        <p>Durante 54 horas, você terá a oportunidade de transformar uma ideia em um negócio real, com o suporte de mentores experientes.</p>
+
+        <h4 class="text-gradient-purple">Networking</h4>
+        <p>Conecte-se com empreendedores, investidores e mentores que podem ajudar a levar seu projeto ao próximo nível.</p>
+
+        <h4 class="text-gradient-purple">Aprenda habilidades valiosas</h4>
+        <p>Participe de workshops e sessões de mentoria para desenvolver habilidades essenciais em áreas como marketing, desenvolvimento de produtos e validação de mercado.</p>
+
+        <h4 class="text-gradient-purple">Tenha uma experiência inesquecível</h4>
+        <p>Participe de uma maratona de inovação e colaboração, onde a diversão e o aprendizado caminham juntos.</p>
+    </section>
+    <hr class="gradient">
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <h4>Obrigado aos nossos patrocinadores</h4>
+            <h5>Patrocinadores Diamantes</h5>
+            <ul class="linear-list">
+                <!-- Patrocinadores Diamantes -->
+                <li>
+                    <a href="https://agoratechpark.com.br/wp-content/uploads/2023/11/agora-b.png">
+                    <img height="200" width="200" src="https://agoratechpark.com.br/wp-content/uploads/2023/11/agora-b.png" alt="Ágora Tech Park">
+                    </a>
+                </li>
+            </ul>
+            <h5>Patrocinadores Ouro</h5>
+            <ul class="sponsor-list">
+                <!-- Patrocinadores Ouro -->
+                <li>
+                    <a href="/sponsors/bridgecrew/" data-ga-click="Home, click, cta_text: open Bridgecrew page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/Bridgecrew.svg" alt="Bridgecrew">
+                    </a>
+                </li>
+            </ul>
+            <h5>Patrocinadores Prata</h5>
+            <ul class="sponsor-list">
+                <!-- Patrocinadores Prata -->
+                <li>
+                    <a href="/sponsors/whitesource/" data-ga-click="Home, click, cta_text: open WhiteSource page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/Whitesource.svg" alt="WhiteSource">
+                    </a>
+                </li>
+            </ul>
+            <h5>Patrocinadores Bronze</h5>
+            <ul class="sponsor-list">
+                <!-- Patrocinadores Bronze -->
+                <li>
+                    <a href="/sponsors/ponicode/" data-ga-click="Home, click, cta_text: open Ponicode page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/ponicode.svg" alt="Ponicode">
+                    </a>
+                </li>
+            </ul>
+            <h5>Apoiadores</h5>
+            <ul class="sponsor-list">
+                <!-- Apoiadores -->
+                <li>
+                    <a href="/sponsors/azure/" data-ga-click="Home, click, cta_text: open Microsoft Azure page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/Azure-Stacked-White%20(1).png" alt="Microsoft Azure">
+                    </a>
+                </li>
+            </ul>
+            <h5>Patrocinadores do Sebrae for Startups</h5>
+            <ul class="sponsor-list">
+                <!-- Patrocinadores do Sebrae for Startups -->
+                <li>
+                    <a href="/sponsors/zenhub/" data-ga-click="Home, click, cta_text: open ZenHub page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/zenhub.svg" alt="ZenHub">
+                    </a>
+                </li>
+            </ul>
+            <h5>Patrocinadores Globais</h5>
+            <ul class="sponsor-list">
+                <!-- Patrocinadores Globais -->
+                <li>
+                    <a href="/sponsors/accurics/" data-ga-click="Home, click, cta_text: open Accurics page">
+                    <img src="https://githubuniverse.com/assets/img/sponsors/Accurics_Monochromatic_Logo%20(1).png" alt="Accurics">
+                    </a>
+                </li>
+            </ul>
+            <p>Interessado em <a class="underline" href="">patrocinar</a> o Techstart Startup Weekend Mega Joinville?</p>
+            <br>
+            <a class="button">
+                ENTRE EM CONTATO
+            </a>
+        </div>
+    </section>
+    <section class="updates">
+        <p class="signup-text"><a class="underline" href="">Inscreva-se</a> para receber as últimas atualizações do Techstart Startup Weekend Mega Joinville</p>
+        <p class="follow-text">Siga o evento <span class="text-gradient-purple">#TechstartSWJ</span></p>
+        <ul class="linear-list">
+        
+            <li>
+                <a href="https://linkedin.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" style="width: 24px;">
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px;">
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <footer>
+        <ul class="linear-list">
+            <li>
+                <a href="">Código de Conduta</a>
+            </li>
+            <li>
+                <a href="">Termos</a>
+            </li>
+            <li>
+                <a href="">Privacidade</a>
+            </li>
+            <li>
+                <a href="">Patrocínio de eventos</a>
+            </li>
+            <li>
+                <a href="mailto:swjoinville@gmail.com">swjoinville@gmail.com</a>
+            </li>
+        </ul>
+        <a href="">
+            <img class="logo" src="asset/Startup-Weekend-Logo-Inverse.svg" alt="Techstart Startup Weekend Mega Joinville">
+        </a>
+        <p class="copyright">© 2024 Techstart Startup Weekend Mega Joinville. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
